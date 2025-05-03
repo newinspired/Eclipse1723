@@ -10,7 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-... (clé d’intégrité)" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 
 
@@ -24,28 +28,33 @@
         <div class="welcome-modal" id="welcomeModal">
             <div class="logo-welcome-eclipse">
                 <h2>ECLIPSE</h2>
-                <h3>LUXURY MOUTAIN LOFT</h3>
+                <h3>LUXURY MOUNTAIN LOFT</h3>
             </div>
         </div>
         
         
 
 
-            <img class="background-image-part-one" src="style/images-used/part-one-background.webp" alt="Image de la cuisine du loft avec des portraits de cerf"> 
-            <header>
-                <button class="logo-header-eclipse" onclick="location.href='main.html'">
-                    <h3>LUXURY MOUTAIN LOFT</h3>
+            <img class="background-image-part-one" src="style/images-used/part-one/part-one-background.webp" alt="Image de la cuisine du loft avec des portraits de cerf"> 
+            <header id="header">
+                <div class="logo-header-eclipse" onclick="location.href='main.html'">
+                    <h3>LUXURY MOUNTAIN LOFT</h3>
                     <h2>ECLIPSE</h2>
                     <p>1723</p>
-                </button>
+                </div>
                 <nav>
-                    <a href="main.html">ACCUEIL</a>
-                    <a href="#">PRESTATIONS</a>
-                    <a href="#">TARIFS</a>
-                    <a href="#">INFORMATIONS</a>
-                    <a class="gold-title" href="contact.html">CONTACT</a>
+                    <a href="#header">ACCUEIL</a>
+                    <a href="#partTwo">PRESTATIONS</a>
+                    <a href="#prices">TARIFS</a>
+                    <a href="#information">INFORMATIONS</a>
+                    <a class="gold-title" href="#footer">CONTACT</a>
+                    <div class="language-switcher">
+                        <i class="fa-solid fa-earth-europe"></i>
+                        <button id="lang-fr">FR</button>
+                        <span>-</span>
+                        <button id="lang-en">ENG</button>
+                    </div>
                 </nav>
-                <div class="lang"></div>
             </header>
             <main>
 
@@ -75,27 +84,28 @@
             <div class="part-two" id="partTwo">
                 <div class="part-two-text">
                     <h1>L'Eclipse 1723</h1>
+                    <div class="part-three-line"></div>
                     <h3>Un lieu inoubliable</h3>
                     <p>Bienvenue à l'Eclipse 1723, un loft d'exception. Prêts à succomber au charme de ce lieu d'exception ? Réservez dès maintenant et laissez la magie opérer...</p>
                 </div>   
                 <div class="scrolling-images-part-two">
 
                     <div class="left-arrow">
-                        <i class="fa-solid fa-arrow-left" aria-label="Image précédente"></i>
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                     </div>
-               
+
                         <div class="left-image">
-                            <img src="style/images-used/part-two-pool-table.webp" alt="salon avec vue sur la montagne">
+                            <img src="style/images-used/part-two/part-two-living-room.webp" alt="salon avec vue sur la montagne">
                         </div>
                         <div class="main-image">
-                            <img src="style/images-used/part-two-living-room.webp" alt="vu depuis le jacuzzi">
+                            <img src="style/images-used/part-two/part-two-jacuzzi-.webp" alt="vu depuis le jacuzzi">
                         </div>
                         <div class="right-image">
-                            <img src="style/images-used/part-two-jacuzzi-.webp" alt="cuisine spacieuse du loft">
+                            <img src="style/images-used/part-two/part-two-pool-table.webp" alt="cuisine spacieuse du loft">
                         </div>
 
                     <div class="right-arrow">
-                        <i class="fa-solid fa-arrow-right" aria-label="Image précédente"></i>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
@@ -127,7 +137,7 @@
 
                     <div class="part-three-img">
                         <div class="vertical-line-yellow"></div>
-                        <img class="main-image-part-three" src="style/images-used/part-three-kitchen.webp" alt="cuisine du loft">
+                        <img class="main-image-part-three" src="style/images-used/part-three/part-three-kitchen.webp" alt="cuisine du loft">
                         <div class="vertical-line-white"></div>
                     </div>
 
@@ -137,15 +147,15 @@
                         <h3 id="part-three-text-heading">Bienvenue à l'Eclipse 1723</h3>
                         <h2 id="part-three-text-subheading">
                             <span>Une cuisine</span>
-                            <div class="gold-title-part-three">
+                            <span class="gold-title-part-three">
                                 <span class="gold-title">entièrement</span>&nbsp;<span>équipée</span>
-                            </div>
+                            </span>
                         </h2>
                         <p id="part-three-text-description">Un sauna pour se ressourcer après une journée sur les pistes : Laissez la chaleur bienfaisante apaiser vos muscles et préparer votre corps pour de nouvelles aventures.</p>
                         <div class="part-three-choose">
-                            <img class="part-three-choose-button" id="leftImage" src="style/images-used/part-three-kitchen.webp" alt="Cuisine spacieuse du loft">
-                            <img class="part-three-choose-button"  id="centerImage" src="style/images-used/part-three-sauna.webp" alt="Sauna du loft">
-                            <img class="part-three-choose-button" id ="rightImage" src="style/images-used/part-three-bar.webp" alt="Bar du loft">
+                            <img class="part-three-choose-button" id="leftImage" src="style/images-used/part-three/part-three-kitchen.webp" alt="Cuisine spacieuse du loft">
+                            <img class="part-three-choose-button"  id="centerImage" src="style/images-used/part-three/part-three-sauna.webp" alt="Sauna du loft">
+                            <img class="part-three-choose-button" id ="rightImage" src="style/images-used/part-three/part-three-bar.webp" alt="Bar du loft">
                         </div>
                     </div>
                 </div>
@@ -167,28 +177,68 @@
             <div class="part-four">
                 <div class="part-four-text">
                     <h2>
-
+                        <span>Un<span class="gold-title"> séjour</span> entre</span>
+                        <span>confort et <span class="gold-title">élégance</span></span>
                     </h2>
+                    <div class="part-three-line"></div>
                     <p>
-
+                        Avec 4 chambres, 3 salles de bain et 3 WC, l'Eclipse 1723 offre un confort digne d'un établissement 3 étoile. Chaque espace a été pensé pour garantir intimité, raffinement et bien être, afin que chaque invité profite pleinement de son séjour. 
                     </p>
                 </div>
-
-
-
-
-
-
-
-
-
                 <div class="part-four-img">
-                    
+                    <div id="lightbox" style="display:none;">
+                        <div id="lightbox-close">&times;</div>
+                        <img id="lightbox-img" src="#" alt="Agrandissement">
+                    </div>
+                    <img src="style/images-used/part-four/bedroom-one.webp" alt="chambre du loft avec vue sur la montagne">
+                    <img src="style/images-used/part-four/bedroom-two.webp" alt="chambre du loft avec vue sur la montagne">
+                    <img src="style/images-used/part-four/bedroom-three.webp" alt="chambre du loft avec vue sur la montagne">
+                    <img src="style/images-used/part-four/bedroom-four.webp" alt="salle de bain du loft">    
+                </div> 
+                <div class="part-four-img-bathroom">
+                    <img src="style/images-used/part-four/bathroom.webp" alt="salle de bain du loft">
+                    <img src="style/images-used/part-four/bathroom-two.webp" alt="salle de bain du loft">
                 </div>
             </div>
 
-            <div class="part-five">
-                <h2></h2>
+
+
+
+
+
+
+            <div class="part-five" id="prices">
+                <h2>
+                    <span class="gold-title">Découvrez<span> nos tarifs</span></span>
+                    <span>et nos offres<span class="gold-title"> exeptionnelles</span></span>
+                </h2>
+                <div class="part-five-line"></div>
+                <div class="part-five-container-prices">
+                    <div class="card-prices"> <h3>Tarifs par défaut</h3>
+                        <p>Par jour : 491€</p>
+                        <p>Par semaine : 2747€</p>
+                    </div>
+                    <div class="card-prices"> <h3>Dec-Jan-Mar</h3>
+                        <p>Par jour : 696€</p>
+                        <p>Par semaine : 3898€</p>
+                    </div>
+                    <div class="card-prices"> <h3>Noël</h3>
+                        <p>Par jour : 800€</p>
+                        <p>Par semaine : 5600€</p>
+                    </div>
+                    <div class="card-prices"> <h3>Jour de l'an</h3>
+                        <p>Par jour : 908€</p>
+                        <p>Par semaine : 6488€</p>
+                    </div>
+                    <div class="card-prices"> <h3>Février</h3>
+                        <p>Par jour : 687€</p>
+                        <p>Par semaine : 4809€</p>
+                    </div>
+                    <div class="card-prices"> <h3>Été</h3>
+                        <p>Par jour : 546€</p>
+                        <p>Par semaine : 3059€</p>
+                    </div>
+                </div>
             </div>
 
 
@@ -201,23 +251,149 @@
 
 
 
-            <div class="part-six">
-                <div class="part-six-text">
-                    <h2></h2>
-                    <p></p>
-                </div>
+            <div class="part-six" id="information">
+                <h2 class="gold-title">Informations</h2>
+                <div class="part-six-line-white"></div>
+                <div class="part-six-location">
+                    <div class="text-location">
+                        <p>LOCALISATION</p>
 
-                <div class="part-six-map">
-                    <img>
+                    </div>
+                    <div class="map" id="map" style="height: 400px;">
+
+                    </div>
                 </div>
             </div>
+
+
+
+
+
+            <div class="part-six-container-equipment">
+                <h2>Équipements</h2>
+                <div class="part-six-line-white"></div>
+                <div class="part-six-equipment">
+                    <div class="card-equipment">
+                        <h3>Parking et installations</h3>
+                        <p>Parking</p>
+                    </div>
+                    <div class="card-equipment"> 
+                        <h3>Politiques</h3>
+                        <p>Enfants autorisés, animaux acceptés</p>
+                    </div>
+                    <div class="card-equipment"> 
+                        <h3>Salle de bain et blanchisserie</h3>
+                        <p>Salle de bain & blanchisserie, sèche-cheveux,sèche-linge,fer et table à repasser, douche, baignoire,lavabo, machine à laver</p>
+                    </div>
+                    <div class="card-equipment"> 
+                        <h3>Chauffage et climatisation</h3>
+                        <p>Air conditionné, chauffage disponible</p>
+                    </div>
+                    <div class="card-equipment"> 
+                        <h3>Internet et bureautique</h3>
+                        <p>Wi-Fi haut débit Internet</p>
+                    </div>
+                    <div class="card-equipment"> 
+                        <h3>Cuisine et salle à manger</h3>
+                        <p>Cuisinière et réfrigirateur</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="container-part-six-house-rules-polices-notes">
+                <div class="part-six-house-rules">
+                    <h2>Politique et notes</h2>
+                    <div class="part-six-line-white"></div>
+                    <div>
+                        <h3>Echéancier du paiement</h3>
+                        <p>33% du montant total est dû au moment de la réservation.</p>
+                        <p>33% du paiement est requis 60 jours avant l'arrivée.</p>
+                        <p>Le montant restant doit être payé 30 jours avant l'arrivée.</p>
+                    </div>
+                    <div>
+                        <h3>Politique d'annulation</h3>
+                        <p>95% des réglementspré-payés sont remboursablesen cas d'annulation 60 jours avant l'arrivée ou plus tôt.</p>
+                        <p>50% des réglements pré-payés sont remboursables en cas d'annulation 28 jours avant l'arrivée ou plus tôt.</p>
+                        <p>0% remboursable si annulation après</p>
+                    </div>
+                    <div>
+                        <h3>Caution</h3>
+                        <p>Une pré-autorisation de 1000€ est détenue le jour avant l'arrivée et annulée le 7ème jour avant le départ.</p>
+
+                    </div>
+                </div>
+
+                <div class="part-six-policies-and-notes">
+                    <h2>Règles de la maison</h2>
+                    <div class="part-six-line-white"></div>
+                        <p>Enfants autorisés</p>
+                        <p>Animaux autorisés</p>
+                        <p>Arrivée : 05:00 PM</p>
+                        <p>Départ : 07:00 PM</p>
+                    <img src="style/images-used/image-contact.webp" alt="règles de la maison">
+                </div>
+                
+            </div>
+            
              
 
 
-
             
+            <div class="part-seven" id="contact">
+                <h2>
+                    <span class="gold-title">Contactez<span>-nous pour </span></span>
+                    <span>planifier votre séjour<span class="gold-title"> exclusif</span></span>
+                </h2>
+                <div class="part-contact">
+                    <div class="part-contact-text">
+                        <h3>Formulaire</h3>
+                        <h3>d'inscription</h3>
+                        <p>Bienvenue à l'Eclipse 1723</p>
+                    </div>
+                    <div class="part-contact-mail">
+                        <form action="https://formsubmit.co/locationloft@example.com" method="POST">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://tonsite.com/merci.html">
+                            <input type="text" name="Nom" placeholder="Nom" required>
+
+                            <input type="email" name="Email" placeholder="Email" required>
+                            
+                            <input type="tel" name="Téléphone" placeholder="Téléphone">
+                            
+                            <input type="date" name="Date d’arrivée" required>
+                            
+                            <input type="date" name="Date de départ" required>
+                            
+                            <input type="number" name="Nombre de personnes" placeholder="Nombre de personnes" min="1" required>
+                            
+                            <textarea name="Message" placeholder="Message ou demandes spécifiques..."></textarea>
+
+                            <button type="submit">Je veux réserver</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
+    <footer id ="footer">
+        <div class="logo-footer-eclipse" onclick="location.href='main.html#header'">
+            <h3>LUXURY MOUNTAIN LOFT</h3>
+            <h2>ECLIPSE</h2>
+            <p>1723</p>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 
