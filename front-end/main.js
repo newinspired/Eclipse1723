@@ -69,23 +69,23 @@ document.querySelectorAll('.part-three-choose-button').forEach(button => {
         if (button.id === 'leftImage') {
             selectedImage = leftImage;
             newText = {
-                heading: 'Cuisine entièrement équipée',
-                subheading: 'Préparez vos plats préférés dans notre cuisine moderne',
-                description: 'Profitez de la commodité d\'une cuisine entièrement équipée pour vos repas.'
+                heading: "Bienvenue à l'Eclipse 1723",
+                subheading: 'Une cuisine<br>entièrement équipée',
+                description: 'Une cuisine moderne et luxueuse, pensée pour allier confort, espace et plaisir culinaire.'
             };
         } else if (button.id === 'centerImage') {
             selectedImage = centerImage;
             newText = {
                 heading: 'Relaxez-vous dans notre sauna',
-                subheading: 'Un sauna pour se ressourcer après une journée de ski',
-                description: 'Détendez-vous pleinement dans notre sauna après une journée bien remplie.'
+                subheading: 'Évasion Bien-Être',
+                description: 'Un sauna haut de gamme pour un pur moment de détente après une journée en montagne.'
             };
         } else if (button.id === 'rightImage') {
             selectedImage = rightImage;
             newText = {
                 heading: 'Ambiance conviviale au bar',
-                subheading: 'Un lieu chaleureux pour partager de bons moments',
-                description: 'Venez profiter de notre bar cosy et convivial.'
+                subheading: 'L’Art du Cocktail',
+                description: 'L’endroit idéal pour trinquer en toute intimité.',
             };
         }
 
@@ -162,19 +162,16 @@ lightbox.addEventListener('click', (e) => {
 
 /*-------------------map-location-------------------*/
 
+var map = L.map('map').setView([42.5040, 2.0350], 13);
 
-const map = L.map('map').setView([48.8566, 2.3522], 13);
-
-// Ajouter un fond de carte (OpenStreetMap dans ce cas)
+// Ajouter la couche de tuiles (OpenStreetMap)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
-// Ajouter un marqueur à la carte
-L.marker([51.505, -0.09]).addTo(map)
-    .bindPopup('Hello, World!')
-    .openPopup();
-
+// Ajouter un marqueur à Font-Romeu
+var marker = L.marker([42.5040, 2.0350]).addTo(map);
+marker.bindPopup("<b>Font-Romeu</b><br>Bienvenue dans les Pyrénées !").openPopup();
 
 
 
