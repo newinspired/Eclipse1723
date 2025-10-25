@@ -41,9 +41,8 @@
                     <p>1723</p>
                 </div>
                 <nav>
-                    <a href="#header">ACCUEIL</a>
                     <a href="#partTwo">PRESTATIONS</a>
-                    <a href="#prices">TARIFS</a>
+                    <a class="hide-nav" href="#prices">TARIFS</a>
                     <a href="#information">INFORMATIONS</a>
                     <a class="gold-title" href="#footer">CONTACT</a>
                     <!--<div class="language-switcher">
@@ -92,15 +91,15 @@
                         <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                     </div>
 
-                        <div class="left-image">
-                            <img src="style/images-used/part-two/part-two-living-room.webp" alt="salon avec vue sur la montagne">
-                        </div>
-                        <div class="main-image">
-                            <img src="style/images-used/part-two/part-two-jacuzzi-.webp" alt="vu depuis le jacuzzi">
-                        </div>
-                        <div class="right-image">
-                            <img src="style/images-used/part-two/part-two-pool-table.webp" alt="cuisine spacieuse du loft">
-                        </div>
+                    <div class="left-image">
+                        <img src="style/images-used/part-two/part-two-living-room.webp" alt="salon avec vue sur la montagne">
+                    </div>
+                    <div class="main-image">
+                        <img src="style/images-used/part-two/part-two-jacuzzi-.webp" alt="vu depuis le jacuzzi">
+                    </div>
+                    <div class="right-image">
+                        <img src="style/images-used/part-two/part-two-pool-table.webp" alt="cuisine spacieuse du loft">
+                    </div>
 
                     <div class="right-arrow">
                         <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
@@ -134,9 +133,7 @@
 
 
                     <div class="part-three-img">
-                        <div class="vertical-line-yellow"></div>
                         <img class="main-image-part-three" src="style/images-used/part-three/part-three-kitchen.webp" alt="cuisine du loft">
-                        <div class="vertical-line-white"></div>
                     </div>
 
                 
@@ -337,21 +334,23 @@
                         <p>Bienvenue à l'Eclipse 1723</p>
                     </div>
                     <div class="part-contact-mail">
-                        <form action="https://formsubmit.co/ton.adresse@email.com" method="POST">
-                            <!-- Sécurité & redirection -->
+                        <form action="https://formspree.io/f/ton_code_unique" method="POST">
+                            <!-- 🔒 Sécurité & configuration -->
+                            <input type="hidden" name="_subject" value="Nouvelle demande via le site Eclipse 1723">
+                            <input type="hidden" name="_template" value="table">
                             <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="https://tonsite.com/merci.html">
-                            <input type="hidden" name="_template" value="table"> <!-- meilleur format d’email -->
 
-                            <!-- Formulaire visible -->
-                            <input type="text" name="Nom" placeholder="Nom" required>
-                            <input type="email" name="Email" placeholder="Email" required>
-                            <input type="tel" name="Téléphone" placeholder="Téléphone">
-                            <input type="number" name="Nombre de personnes" placeholder="Nombre de personnes" min="1" required>
-                            <textarea name="Message" placeholder="Message ou demandes spécifiques..." rows="4"></textarea>
+                            <!-- 💬 Champs visibles -->
+                            <input type="text" name="Nom" placeholder="Votre nom *" required>
+                            <input type="email" name="Email" placeholder="Votre adresse e-mail *" required>
+                            <input type="tel" name="Téléphone" placeholder="Votre téléphone">
+                            <input type="number" name="Nombre_de_personnes" placeholder="Nombre de personnes" min="1" required>
+                            <textarea name="Message" placeholder="Votre message ou vos demandes spécifiques..." rows="5" required></textarea>
 
-                            <button type="submit">Je veux réserver</button>
+                            <!-- ✅ Bouton -->
+                            <button type="submit">Envoyer la demande</button>
                         </form>
+
                         
                     </div>
                 </div>

@@ -199,6 +199,7 @@ button {
     width : 100%;
     opacity : 0.07;
     position: absolute;
+    height : 1000px;
 }
 
 .main-container {
@@ -222,12 +223,12 @@ button {
 
 header {
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;   
     color: white;
     font-family: 'Playfair Display', serif;
     z-index: 100;
-    gap : 7%;
     padding-top: 35px;
     box-sizing: border-box;
 }
@@ -236,9 +237,8 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 180px;
     gap : 5%;
-    font-size: clamp(16px, 2vw, 28px);
+    font-size: 25px;
 }
 
 header nav a {
@@ -273,7 +273,6 @@ header nav a:hover::after {
     transform: none;
     margin : 0px;
     z-index: 100;
-    padding-left : 7%;
 }
 
 .logo-header-eclipse:hover {
@@ -417,36 +416,27 @@ header nav a:hover::after {
 .part-two p{
     font-family : "Playfair Display", serif;
     color : white;
-    margin : 0px;
-    padding : 0px 10%;
+    margin : 0px 10%;
 }
 /*---------------------SCROLLING IMAGES--------------------*/
 
 .scrolling-images-part-two{
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding-top: 40px;
-    width : 100%;   
-    height : 600px;
+    padding-top: 40px;   
     gap : 50px;
 }
 
-.main-image img{
-    width : 100%; 
+.scrolling-images-part-two img{
+    width: clamp(1px, 25vw, 800px);
+    height: auto;
 }
 
-.main-image{
-    display: flex;
-    justify-content: center;
-    width: auto;
-}
-
-.left-image, .right-image{
-    display: flex;
-    justify-content: center;
-    width: auto;
-    max-height: 80%;
-    padding-top : 50px;
+.left-image img, 
+.right-image img{
+    width: clamp(1px, 20vw, 800px);
+    height: auto;
 }
 
 .right-arrow, .left-arrow{
@@ -472,7 +462,7 @@ header nav a:hover::after {
     transition: opacity 0.3s ease-in-out;
 }
 
-/*--------------PART-TWO-ANIMATION-SCROLLING-------------------*/
+/*-----------------------------------------------------------*/
 
 
 
@@ -518,34 +508,21 @@ header nav a:hover::after {
 
 .container-part-three {
     display : flex;
+    justify-content: center;
+    align-items: center;
     margin : 0px;
     padding : 50px 10% 100px 10%;
 }
 
 /*---------------------PART-THREE-IMG------------------*/
 
-.part-three-img{
-    display: flex;
-    width: 40%; 
+.part-three-img {
+    max-width : 450px;
 }
 
 .part-three-img img{
-    width : 80%;
-}
-
-.vertical-line-yellow {
-    width: 17px;
-    height: 88%;
-    background-color: #E5C394;
-    margin-top : 20px;
-}
-  
-.vertical-line-white {
-    width: 17px;
-    height: 88%;
-    background-color: white;
-    margin-top : 50px;
-
+    width : 100%;
+    height : auto;
 }
 
 /*---------------------PART-THREE-TEXT-------------------*/
@@ -554,7 +531,8 @@ header nav a:hover::after {
 .part-three-text{
     display: flex;
     flex-direction: column;
-    padding: 30px 0px 0px 60px;
+    justify-content: center;
+    padding: 0px 0px 0px 60px;
     max-width : 45%;
 }
 
@@ -604,12 +582,12 @@ header nav a:hover::after {
 .part-three-choose{
     display : flex;
     justify-content: flex-start;
-    padding : 60px 0px 0px 100px; 
+    margin-top: 30px;
     gap : 30px;
 }
 
 .part-three-choose-button{
-   width : 30%;
+   width : 110px;
    border : 1px solid white;
    cursor: pointer;
 }
@@ -668,6 +646,14 @@ header nav a:hover::after {
     margin : 0px 5%;
 }
 
+.part-four-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin : 0px 5%;
+}
+
 .part-four h2 {
     display: flex;
     flex-direction: column;
@@ -700,7 +686,7 @@ header nav a:hover::after {
     justify-content: center;
     align-items: center;
     padding-top : 50px;
-    gap : 50px;
+    gap : 5%;
 }
 
 .part-four-img img{
@@ -812,6 +798,7 @@ header nav a:hover::after {
     margin: 0;   
     padding-bottom : 30px;
     line-height: 1;
+    text-align: center;
 }
 
 .part-five-line{
@@ -913,18 +900,9 @@ header nav a:hover::after {
     margin-top: 30px;
 }
 
-.map-location .map{
-    border : 3px solid #E5C394;
-}
-
-.map-location h2{
-    padding-bottom: 20px;
-}
-
-.map {
-    background-color: blanchedalmond;
-    width : 500px;
-    height : 300px;
+iframe{
+    width : 350px;
+    height : 400px;
 }
 
 /*----------------PART-SIX-EQUIPMENT--------------------*/
@@ -1000,11 +978,12 @@ header nav a:hover::after {
 
 .container-part-six-house-rules-polices-notes {
     display:flex;
+    justify-content: center;
+    align-items: center;
     margin : 0px 5%;
     margin-top: 40px;
     padding-top :20px;
     padding-bottom : 40px;
-    border : 1px solid white;
     background-color: #121212;
 }
 
@@ -1026,7 +1005,7 @@ header nav a:hover::after {
 
 .container-part-six-house-rules-polices-notes h3 {
     font-size: 30px;
-    color : white;
+    color : #E5C394;
     font-family: "Playfair Display", serif;
     font-weight : 300;
     padding-top : 20px;
@@ -1118,6 +1097,7 @@ header nav a:hover::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 65px;
     font-family: "Playfair Display", serif;
     font-weight : 300;
@@ -1254,74 +1234,313 @@ footer button {
 
 
 
+
 /*--------------------Ordinateur (1024px et moins)--------------------*/
 
 @media (max-width: 1024px) {
-    body{
-        
+
+    .background-image-part-one{
+        width : 100%;
+        opacity : 0.07;
+        position: absolute;
+        height : 800px;
+    }
+
+    header nav {
+        font-size: clamp(10px, 7vw, 23px);
+        gap: clamp(5px, 3vw, 30px);
+    }
+
+
+    .hide-nav {
+        display: none;
+    }
+
+    /*--------------PART ONE---------------*/
+
+    .part-one h2{   
+        font-size: 65px;
+        padding-bottom: 30px;
+    }
+
+    /*--------------PART TWO---------------*/
+
+    .part-two h1 {
+        font-size: 65px;
+    }
+
+    .part-two h3{
+        font-size: 25px;
+    }
+
+    .part-two p{
+        font-size: 20px;
+    }
+
+    .scrolling-images-part-two{
+        gap : 20px;
+    }
+
+    .left-arrow, .right-arrow{
+        display : none;
+    }
+
+    /*--------------PART THREE---------------*/
+
+    .part-three-img img {
+        width: clamp(100px, 40vw, 365px);
+    }
+
+    .part-three-title h2 {
+        font-size: clamp(20px, 7vw, 65px);
+    }
+
+    .part-three-choose img{
+        width: clamp(30px, 10vw, 80px);
+        height: auto;
+    }
+
+    .part-three-text h2{
+        font-size: clamp(20px, 3vw, 40px);
+    }
+
+    .part-three-text h3{
+        font-size: clamp(15px, 5vw, 30px);
+    }
+    .part-three-text p{
+        font-size: 20px;
+    }
+
+    /*--------------PART FOUR---------------*/
+
+    .part-four p{
+        font-size: clamp(15px, 3vw, 18px);
+    }
+
+    /*--------------PART SIX---------------*/
+
+    .container-part-six-house-rules-polices-notes {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap : 80px;
+        margin : 0px;
+        padding: 40px 0px 40px 0px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-------------------- TABLETTE (768px et moins) --------------------*/
 @media screen and (max-width: 768px) {
 
-    nav a {
-        margin: 0 8px;
+    header{
+        display:flex;
+        flex-direction: column;
+        gap : 25px;
     }
 
     .logo-header-eclipse, .logo-footer-eclipse {
         text-align: center;
     }
 
-    .scrolling-images-part-two {
-        flex-direction: column;
-        align-items: center;
+    .background-image-part-one{
+        width : 100%;
+        opacity : 0.07;
+        position: absolute;
+        height : auto;
     }
 
-    .scrolling-images-part-two .left-image,
-    .scrolling-images-part-two .right-image {
-        display: none;
+
+    /*--------------PART ONE---------------*/
+
+    .part-one h2{   
+        font-size: clamp(30px, 5vw, 50vw);
     }
 
-    .main-image img {
-        width: 90vw;
+    /*--------------PART two---------------*/
+
+    .scrolling-images-part-two img{
+        min-width : 130px;
+    }
+
+    .main-image img{
+        min-width : 150px;
+    }
+
+    .right-arrow, .left-arrow{
+        display : none;
+    }
+
+    .part-two-text h1{
+        font-size: clamp(10px, 10vw, 80px);
+    }
+
+    .part-two-text h3{
+        font-size: clamp(10px, 5vw, 40px);
+    }
+
+    .part-two-text p{
+        font-size: 15px;
+        text-align: center;
+        max-width : 50%;
+    }
+    
+    /*--------------PART THREE---------------*/
+
+    .part-three-text{
+        padding-left: 10px;
+        width : 90%;    
+    }
+
+    .part-three-choose img{
+        width: clamp(40px, 10vw, 80px);
         height: auto;
     }
 
-    .container-part-three {
-        flex-direction: column;
-        align-items: center;
+    .part-three-text h3{
+        font-size: clamp(15px, 5vw, 30px);
+    }
+
+    .part-three-text p{
+        font-size: clamp(10px, 3vw, 18px);
+    }
+
+    /*--------------PART FOUR---------------*/
+    .part-four-img img{
+        width : clamp(80px, 17vw, 200px);
+    }
+
+    .part-four p {
+        font-size: clamp(10px, 2vw, 18px);
+        width: 60%;
+        padding-bottom: 20px;
+        max-width: 80%;
+        margin: 0 auto;
         text-align: center;
+        overflow-wrap: break-word;
+        white-space: normal;
     }
 
-    .part-three-img img {
-        width: 90vw;
-        margin-bottom: 20px;
+    .part-four h2 {
+        font-size: clamp(20px, 7vw, 50px);
     }
 
-    .part-three-choose {
-        justify-content: center;
-    }
-
-    .part-four-img,
-    .part-four-img-bathroom {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
+    /*--------------PART FIVE---------------*/
     .part-five-container-prices {
         grid-template-columns: 1fr 1fr;
         gap: 15px;
     }
 
-    .part-contact {
+    .part-five h2 {
+        font-size: clamp(20px, 7vw, 50px);
+        width : 70%;
+    }
+
+    .part-five-container-prices{
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    .card-prices {
+        width: clamp(150px, 80vw, 400px);
+    }
+    .part-five-container-prices {
+        font-size: clamp(10px, 3vw, 16px);
+    }
+    .part-five-container-prices h3 {
+        font-size: clamp(20px, 3vw, 25px);
+        font-weight: 700;
+    }
+
+    .part-five-container-prices p {
+        font-size: clamp(18px, 3vw, 22px);
+        font-weight : 500;
+    }
+
+    /*--------------PART SIX---------------*/
+    /*--------------PART SIX EQUIPEMENT ---------------*/
+    .part-six-container-equipment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .part-six-container-equipment .part-six-equipment { 
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .part-six-container-equipment h2 {
+        font-size: clamp(20px, 7vw, 50px);
+        width: 70%;
+    }
+
+    .card-equipment {
+        width: clamp(150px, 80vw, 400px);
+    }
+
+    .part-six-equipment h3 {
+        font-size: clamp(20px, 3vw, 25px);
+        font-weight: 700;
+    }
+
+    .part-six-equipment p {
+        font-size: clamp(18px, 3vw, 22px);
+        font-weight : 500;
+    }
+
+    /*--------------PART SEVEN---------------*/
+    .part-seven {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .part-seven h2 {
+        font-size: clamp(14px, 7vw, 50px);
+        width: 70%;
+        text-align: center;
+    }
+
+    
+    /*--------------PART CONTACT---------------*/
+
+    .part-contact-text h3{
+        font-size: clamp(20px, 10vw, 60px);
+    }
+
+    .part-contact {
+        flex-direction: column;
+        align-items: center;
+        min-width: 100%;
+    }
+
     .part-contact-mail form {
         width: 90%;
+    }
+
+    .part-contact-text{
+        display: none;
     }
 
     .map-location .map {
@@ -1330,30 +1549,47 @@ footer button {
     }
 }
 
+
+
+
+
+
+
+
 /*-------------------- MOBILE (480px et moins) --------------------*/
 @media screen and (max-width: 480px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    nav a {
-        display: block;
-        margin: 5px 0;
-        font-size: 16px;
+    header nav{
+        display : none;
     }
 
     .language-switcher {
         margin-top: 10px;
     }
 
-    .part-one h2 {
-        font-size: 22px;
+    /*--------------PART ONE---------------*/
+
+    .part-one{
+        padding-top : 150px;
+        padding-bottom : 100px;
     }
 
     .part-one h3 {
         font-size: 16px;
     }
+
+    /*--------------PART TWO---------------*/
+
+    .scrolling-images-part-two {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .scrolling-images-part-two img{
+        width : clamp(180px, 80vw, 300px);
+    }
+
+    /*--------------PART THREE---------------*/
 
     .part-three-text h2 {
         font-size: 20px;
@@ -1364,9 +1600,63 @@ footer button {
         height: 60px;
     }
 
+    .container-part-three{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .part-three-img img{
+        width: clamp(180px, 80vw, 300px);
+    }
+
+    .part-three-text{
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width : 100%;
+    }
+
+    .part-three-choose img{
+        width: clamp(50px, 20vw, 100px);
+        height: auto;
+    }
+
+    /*--------------PART FOUR---------------*/
+    .part-four p {
+        width : 60%;
+        font-size : clamp(10px, 4vw, 16px);
+    }
+
+    .part-four-img {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .part-four-img img {
+        width : clamp(150px, 70vw, 300px);
+    }
+
+    .part-four-img-bathroom {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .part-four-img-bathroom img {
+        width : clamp(150px, 70vw, 300px);
+    }
+
+    /*--------------PART FIVE---------------*/
     .card-prices {
         font-size: 14px;
-        padding: 10px;
     }
 
     .part-five-container-prices {
@@ -1386,4 +1676,35 @@ footer button {
         font-size: 12px;
         text-align: center;
     }
+
+    /*--------------PART SIX---------------*/
+
+    iframe{
+        width : 200px;
+        height : 300px;
+    }
+    /*--------------PART SIX EQUIPEMENT ---------------*/
+
+    .part-five-container-prices {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .part-five h2 {
+        font-size: clamp(20px, 7vw, 50px);
+        width : 70%;
+    }
+
+
+    .card-equipment {
+        width: clamp(150px, 80vw, 400px);
+    }
+    .part-six-container-prices {
+        font-size: clamp(10px, 3vw, 16px);
+    }
+    .part-six-container-prices h3 {
+        font-size: clamp(16px, 3vw, 20px);
+    }
+
+
 }

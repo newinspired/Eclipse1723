@@ -162,19 +162,6 @@ lightbox.addEventListener('click', (e) => {
 
 /*-------------------map-location-------------------*/
 
-var map = L.map('map').setView([42.5040, 2.0350], 13);
-
-// Ajouter la couche de tuiles (OpenStreetMap)
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap contributors'
-}).addTo(map);
-
-// Ajouter un marqueur à Font-Romeu
-var marker = L.marker([42.5040, 2.0350]).addTo(map);
-marker.bindPopup("<b>Font-Romeu</b><br>Bienvenue dans les Pyrénées !").openPopup();
-
-
-
 
 
 /*------------------------TRANSLATE-----------------------*/
