@@ -429,13 +429,13 @@ header nav a:hover::after {
 }
 
 .scrolling-images-part-two img{
-    width: clamp(1px, 25vw, 800px);
+    width: clamp(1px, 24vw, 380px);
     height: auto;
 }
 
 .left-image img, 
 .right-image img{
-    width: clamp(1px, 20vw, 800px);
+    width: clamp(1px, 22vw, 320px);
     height: auto;
 }
 
