@@ -318,6 +318,7 @@ header nav a:hover::after {
     font-size: 85px;
     padding-bottom: 65px;
     line-height: 1;
+    text-align : center;
 }
 
 .part-one-line{
@@ -687,6 +688,7 @@ header nav a:hover::after {
     align-items: center;
     padding-top : 50px;
     gap : 5%;
+    width : 100%;
 }
 
 .part-four-img img{
@@ -703,21 +705,19 @@ header nav a:hover::after {
     cursor : pointer;
 }
 
-/*---------------------PART-FOUR-IMG-------------------*/
-
 .part-four-img-bathroom {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top : 50px;
-    gap : 50px;
-    width : 90%;
+    gap : 5%;
+    width : 100%;
 }
 
 .part-four-img-bathroom img{
     border-radius : 5%;
     border : white 1px solid;
-    width : 17%;
+    width : 20%;
     height: auto;
     transition: transform 0.4s ease;
     max-width: 300px;
@@ -734,7 +734,7 @@ header nav a:hover::after {
   #lightbox img {
     max-width: 90%;
     max-height: 90%;
-    transform: scale(1.2);
+    transform: scale(1.8);
     transition: transform 0.3s ease;
     border-radius: 10px;
     box-shadow: 0 0 30px #000;
@@ -810,46 +810,36 @@ header nav a:hover::after {
 }
 
 
-/*-------------------PART-FIVE-CARDS-TARIFS------------------*/
+/*-------------------CARD-PRICES-----------------*/
 
-.part-five-container-prices {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 20px;
-    padding-top: 20px;;
-    margin: 0 auto;
-    width : 90%;
-}
-  
 .card-prices {
-    background-color:#f5f5dc;
+    background-color: #121212;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 20px;
-    padding-bottom: 10px;
+    border-radius: 10px;
     text-align: center;
-    border : 3px solid #121212;
+    padding : 25px 10px;
+    width : clamp(200px, 20vw, 300px);
+    color : white;
 }
 
-.part-five-container-prices h3 {
-    font-family: "Playfair Display", serif;
-    color: black;
-    font-weight: 600;
-    font-size: 25px;
-    padding : 10px 0px;
-    margin-bottom: 12px;
-    background-color: #E5C394;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    background-size: 10px;
+.btn-download {
+  display: inline-block;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
 }
 
-.part-five-container-prices p {
-    color :black;
-    font-family:'Baskerville Old Face';
-    font-weight: 500;
+.btn-download:hover {
+  background-color: white;
+  color: #0F0F0F;
+  transform: scale(1.02);
+  cursor: pointer;
 }
-
 
 
 /*---------------------PART-SIX-LOCATION--------------------*/
@@ -924,55 +914,42 @@ iframe{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
+    justify-items: center;
     gap: 20px;
     padding-bottom: 25px;
     margin: 0 auto;
-    width : 80%;
 }
 
 .card-equipment {
-    background-color: #f5f5dc;
+    background-color: #ebe6de;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 20px;
     text-align: center;
-    border : 3px solid #121212;
+    border : 2px solid #121212;
+    width : clamp(300px, 40vw, 600px);
 }
 
 .part-six-equipment h3 {
     font-family: "Playfair Display", serif;
-    color: black;
     font-weight: 600;
     font-size: 25px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
     padding : 10px 0px;
-    background-color: #E5C394;
+    background-color: #d2b48c;
+    color : #121212;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .part-six-equipment p {
-    color :black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color : #121212;
     font-weight: 500;
     padding : 20px 0px;
     font-family:'Baskerville Old Face';
+    margin : 0px 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*--------------PART-SIX-HOUSE-RULES-------------------*/
 
@@ -992,7 +969,7 @@ iframe{
     flex-direction: column;
     justify-content: flex-start;
     margin : 0px 5%;
-    width: 50%;
+    width: 70%;
 }
 
 .container-part-six-house-rules-polices-notes h2 {
@@ -1054,42 +1031,31 @@ iframe{
     border-radius: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*----------------------CONTACT-----------------------*/
 
 .part-contact {
     display: flex;
+    align-items: center;
     padding-bottom : 50px;
-    margin : 0px 10%;
+    gap : clamp(40px, 5vw, 120px);
+}
+
+.part-contact-mail textarea {
+    margin-top: 15px;
+    padding : 10px 10px;
+    height: 200px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #ebe6de;
+    color: black;
+    font-size: 16px;
+    width: clamp(220px, 30vw, 350px);
+    resize: none;
+}
+
+.part-contact-mail textarea::placeholder {
+    color: black;      
+    opacity: 1;        
 }
 
 .part-seven h2{
@@ -1103,7 +1069,7 @@ iframe{
     font-weight : 300;
     color : white;
     margin: 0;   
-    padding-bottom : 130px;
+    padding-bottom : 80px;
     padding-top : 70px;
     line-height: 1;
 }
@@ -1121,15 +1087,16 @@ iframe{
     font-family : "Playfair Display", serif;
     color : white;
     font-weight: 300;
-    font-size: 80px;
+    font-size: clamp(40px, 6vw, 60px);
 }
 
 .part-contact-text p{
     font-family : "Playfair Display", serif;
     color : #E5C394;
     font-weight: 300;
-    font-size: 30px;
+    font-size: clamp(20px, 3vw, 30px);
     padding-top : 20px;
+    text-align: center;
 
 }
 
@@ -1141,29 +1108,33 @@ iframe{
     align-items: flex-start;
     background-color: transparent;
     width : 50%;
+    color: white;
 }
 
 
 .part-contact-mail form {
     display: flex;
     flex-direction: column;
-    width : 50%;
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    gap : 10px;
-}
-  
-.part-contact-mail label {
-    margin-top: 10px;
+    gap : 15px;
 }
   
 .part-contact-mail input, textarea {
-    padding: 15px 0px;
+    margin-top : 15px;
     border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 10px;
     opacity: 1;
-    background-color: transparent;
-    color: white;
-    width : auto;
-    height : auto;
+    background-color: #ebe6de;
+    color: black;
+    width : clamp(220px, 30vw, 350px);
+    padding : 20px 10px;
+}
+
+.part-contact-mail p{
+    font-size: 18px;
+    color : #E5C394;
 }
 
 textarea::placeholder,
@@ -1182,6 +1153,7 @@ input::placeholder {
     margin-top: 20px;
     font-weight: 700;
     font-size : 18px;
+    width : 270px;
 }
   
 
@@ -1235,6 +1207,7 @@ footer button {
 
 
 
+
 /*--------------------Ordinateur (1024px et moins)--------------------*/
 
 @media (max-width: 1024px) {
@@ -1247,7 +1220,7 @@ footer button {
     }
 
     header nav {
-        font-size: clamp(10px, 7vw, 23px);
+        font-size: clamp(18px, 3vw, 24px);
         gap: clamp(5px, 3vw, 30px);
     }
 
@@ -1327,6 +1300,29 @@ footer button {
         margin : 0px;
         padding: 40px 0px 40px 0px;
     }
+    /*--------------PART CONTACT---------------*/
+
+    .part-contact {
+        gap : 0px;
+    }
+
+    .part-contact-mail {
+        width : 70%;
+    }
+
+    .part-contact-text{
+        width : 30%;
+        margin-left: 50px;
+    }
+
+    .part-contact-text h3{
+        font-size: clamp(20px, 5vw, 60px);
+    }
+
+    .part-contact-text p{
+        font-size: clamp(15px, 3vw, 30px);
+    }
+
 }
 
 
@@ -1428,7 +1424,7 @@ footer button {
     }
 
     .part-four p {
-        font-size: clamp(10px, 2vw, 18px);
+        font-size: clamp(14px, 3vw, 18px);
         width: 60%;
         padding-bottom: 20px;
         max-width: 80%;
@@ -1501,7 +1497,7 @@ footer button {
 
     .part-six-equipment h3 {
         font-size: clamp(20px, 3vw, 25px);
-        font-weight: 700;
+        font-weight: 800;
     }
 
     .part-six-equipment p {
@@ -1529,24 +1525,40 @@ footer button {
         font-size: clamp(20px, 10vw, 60px);
     }
 
+    .part-contact-mail input{
+        width : clamp(200px, 40vw, 400px);
+    }
+
+    .part-contact-mail textarea{
+        width : clamp(200px, 40vw, 400px);
+    }
+
     .part-contact {
         flex-direction: column;
         align-items: center;
         min-width: 100%;
     }
 
-    .part-contact-mail form {
-        width: 90%;
-    }
-
     .part-contact-text{
         display: none;
     }
 
-    .map-location .map {
-        width: 100%;
-        height: 300px;
+    .part-contact-mail label {
+        width : clamp(250px, 40vw, 400px);
     }
+
+    .part-contact-mail button{
+        width : clamp(250px, 30vw, 400px);
+    }
+
+    .part-contact-mail form{
+        width : 100%;
+    }
+
+    .part-contact-mail {
+        width : 100%;
+    }
+
 }
 
 
@@ -1683,6 +1695,10 @@ footer button {
         width : 200px;
         height : 300px;
     }
+
+    .part-six-house-rules {
+        margin : 0px;
+    }
     /*--------------PART SIX EQUIPEMENT ---------------*/
 
     .part-five-container-prices {
@@ -1706,5 +1722,9 @@ footer button {
         font-size: clamp(16px, 3vw, 20px);
     }
 
+    /*--------------PART CONTACT---------------*/
 
+    .part-contact-mail label {
+        width: clamp(200px, 35vw, 400px);
+    }
 }

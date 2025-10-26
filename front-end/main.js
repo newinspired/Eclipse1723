@@ -25,6 +25,7 @@ function updateImages() {
     rightImage.src = images[right];
 }
 
+/*
 function animateSlide(direction) {
     container.classList.add(`slide-${direction}`);
 
@@ -47,7 +48,7 @@ leftArrow.addEventListener("click", () => {
 });
 
 updateImages();
-
+*/
 
 /*----------------PART-THREE-ANIMATION--------*/
 
