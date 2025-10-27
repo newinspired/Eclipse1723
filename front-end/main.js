@@ -25,31 +25,6 @@ function updateImages() {
     rightImage.src = images[right];
 }
 
-/*
-function animateSlide(direction) {
-    container.classList.add(`slide-${direction}`);
-
-    setTimeout(() => {
-        currentIndex = (direction === "left")
-            ? (currentIndex + 1) % images.length
-            : (currentIndex - 1 + images.length) % images.length;
-
-        updateImages();
-        container.classList.remove(`slide-${direction}`);
-    }, 300);
-}
-
-rightArrow.addEventListener("click", () => {
-    animateSlide("right");
-});
-
-leftArrow.addEventListener("click", () => {
-    animateSlide("left");
-});
-
-updateImages();
-*/
-
 /*----------------PART-THREE-ANIMATION--------*/
 
 
@@ -160,35 +135,17 @@ lightbox.addEventListener('click', (e) => {
   }
 });
 
+/*-------------------contact-form-reset-------------------*/
 
-/*-------------------map-location-------------------*/
+const contactForm = document.querySelector('form[action*="formspree.io"]');
 
-
-
-/*------------------------TRANSLATE-----------------------*/
-
-
-
-const translations = {
-    fr: {
-        heroTitle: "Bienvenue sur mon site",
-        heroText: "Ceci est une belle introduction.",
-    },
-    en: {
-        heroTitle: "Welcome to my website",
-        heroText: "This is a nice introduction.",
-    }
-    };
-
-    function setLanguage(lang) {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        el.textContent = translations[lang][key] || key;
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        setTimeout(() => {
+            contactForm.reset(); // vide tous les champs
+        }, 500);
     });
-    localStorage.setItem('lang', lang);
-    }
+}
 
-    document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('lang') || 'fr';
-    setLanguage(savedLang);
-    });
+
+

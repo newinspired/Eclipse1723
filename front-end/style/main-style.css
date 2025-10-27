@@ -13,12 +13,10 @@ h1{
 h2{
     font-family: "Playfair Display", serif;
     font-weight : 300;
-    color : white;
 }
 
 h3{
     font-family : 'Baskerville Old Face';  
-    color : white ;
     font-size: 12px;
 }
 
@@ -56,7 +54,6 @@ button {
     margin-bottom: 40px;
 }
 
-
 .part-six-line-gold{
     background-color : #E5C394;
     width: 200px;
@@ -64,12 +61,6 @@ button {
     margin: 0 auto;
     margin-bottom: 40px;
 }
-
-
-
-
-
-
 
 
 /*-------------------Welcome-Modal-------------------*/
@@ -114,7 +105,6 @@ button {
     pointer-events: none;
 }
 
-
 .welcome-modal h2 {
     opacity: 0;
     transform: translateY(-50px);
@@ -129,13 +119,13 @@ button {
     animation-delay: 0.4s;
 }
 
-
 .logo-welcome-eclipse h2{
     display : flex;
     justify-content : center;
     font-family : 'FONTSPRING DEMO-APPAREL', serif;
     font-size : 70px;
     font-weight: 100;
+    color : white;
 }
 
 .logo-welcome-eclipse h3{
@@ -144,17 +134,8 @@ button {
     font-family : 'Playfair Display', serif;
     font-size : 15px;
     font-weight: 100;
+    color : white;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /*-------------------Animation-PART-ONE------------------*/
@@ -182,17 +163,6 @@ button {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /*-------------------Image de fond-------------------*/
 
 .background-image-part-one{
@@ -210,14 +180,6 @@ button {
     width: 100%;
     position: relative; 
 }
-
-
-
-
-
-
-
-
 
 /*---------------------HEADER-------------------*/
 
@@ -247,8 +209,12 @@ header nav a {
     text-decoration: none;
     padding-bottom: 5px;
 }
-  
 
+header nav a:hover {
+    color: #E5C394;
+    transform: scale(1.03);
+}
+  
 header nav a:hover::after {
     width: 100%;
 }
@@ -264,7 +230,6 @@ header nav a:hover::after {
 
 /*-----------------LOGO-HEADER-ECLIPSE-----------------*/
 
-
 .logo-header-eclipse{
     display: flex;
     flex-direction: column;
@@ -275,7 +240,9 @@ header nav a:hover::after {
     z-index: 100;
 }
 
-.logo-header-eclipse:hover {
+.logo-header-eclipse:hover{
+    transform: scale(1.05);
+    color : #E5C394;
     cursor: pointer;
 }
 
@@ -288,6 +255,7 @@ header nav a:hover::after {
     font-family : "Playfair Display", serif;
     font-size : 50px;
     font-weight: 400;
+    color : white;
 }
 
 .logo-header-eclipse p {
@@ -295,7 +263,6 @@ header nav a:hover::after {
     font-size : 25px;
     font-weight: 300;
 }
-
 
 /*---------------------PART-ONE--------------------*/
 
@@ -319,6 +286,7 @@ header nav a:hover::after {
     padding-bottom: 65px;
     line-height: 1;
     text-align : center;
+    color : white;
 }
 
 .part-one-line{
@@ -334,7 +302,7 @@ header nav a:hover::after {
     font-family : "Playfair Display", serif;
     color : #E5C394;
     font-weight: 300;
-    font-size: 25px;
+    font-size: clamp(25px , 4vw, 32px);
     padding-top: 15px;
 }
 
@@ -352,36 +320,6 @@ header nav a:hover::after {
     animation: slideFromBottom 1s ease-out forwards;
     animation-delay: 0.2s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*---------------------PART-TWO--------------------*/
@@ -405,7 +343,7 @@ header nav a:hover::after {
     padding-bottom : 20px;
 }
 
-.part-two h3 {
+.part-two h2 {
     font-family : "Playfair Display", serif;
     color : #E5C394;
     font-weight: 300;
@@ -419,6 +357,7 @@ header nav a:hover::after {
     color : white;
     margin : 0px 10%;
 }
+
 /*---------------------SCROLLING IMAGES--------------------*/
 
 .scrolling-images-part-two{
@@ -430,14 +369,17 @@ header nav a:hover::after {
 }
 
 .scrolling-images-part-two img{
-    width: clamp(1px, 24vw, 380px);
+    width: clamp(50px, 24vw, 380px);
     height: auto;
+    border : 2px solid #E5C394;
+    border-radius: 5px;
 }
 
 .left-image img, 
 .right-image img{
     width: clamp(1px, 22vw, 320px);
     height: auto;
+    border : 2px solid white;
 }
 
 .right-arrow, .left-arrow{
@@ -462,23 +404,6 @@ header nav a:hover::after {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
-
-/*-----------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*---------------------PART-THREE-------------------*/
 .part-three {
@@ -524,10 +449,11 @@ header nav a:hover::after {
 .part-three-img img{
     width : 100%;
     height : auto;
+    border-radius : 5px;
+    border : 2px solid #E5C394;
 }
 
 /*---------------------PART-THREE-TEXT-------------------*/
-
 
 .part-three-text{
     display: flex;
@@ -573,11 +499,6 @@ header nav a:hover::after {
     justify-content: flex-start;
 }
 
-
-
-
-
-
 /*---------------------PART-THREE-CHOOSE-------------------*/
 
 .part-three-choose{
@@ -595,8 +516,8 @@ header nav a:hover::after {
 
 .part-three-choose-button:hover{
     opacity: 0.5;
+    transform: scale(1.05);
  }
-
 
 /*---------------------PART-THREE-ANIMATION-------------------*/
 
@@ -625,16 +546,6 @@ header nav a:hover::after {
 .fade-in {
     animation: fadeIn 0.5s ease-in forwards;
 }
-
-
-
-
-
-
-
-
-
-
 
 /*---------------------PART-FOUR--------------------*/
 
@@ -692,7 +603,7 @@ header nav a:hover::after {
 }
 
 .part-four-img img{
-    border-radius : 5%;
+    border-radius : 5px;
     border : white 1px solid;
     width : 20%;
     height : auto;
@@ -701,8 +612,9 @@ header nav a:hover::after {
 }
 
 .part-four-img img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     cursor : pointer;
+    border: 2px solid #E5C394;
 }
 
 .part-four-img-bathroom {
@@ -744,11 +656,16 @@ header nav a:hover::after {
     position: absolute;
     top: 30px;
     right: 40px;
-    font-size: 60px;
+    font-size: 50px;
     color: white;
     cursor: pointer;
     font-family: Arial, sans-serif;
   }
+
+   #lightbox-close:hover {
+        transform: scale(1.2);
+        color : #E5C394;
+    }
 
   #lightbox {
     position: fixed;
@@ -762,17 +679,6 @@ header nav a:hover::after {
     align-items: center;
     z-index: 1000;
   }
-
-
-
-
-
-
-
-
-
-
-
 
 /*---------------------PART-FIVE--------------------*/
 
@@ -809,7 +715,6 @@ header nav a:hover::after {
     margin-bottom: 40px;
 }
 
-
 /*-------------------CARD-PRICES-----------------*/
 
 .card-prices {
@@ -840,7 +745,6 @@ header nav a:hover::after {
   transform: scale(1.02);
   cursor: pointer;
 }
-
 
 /*---------------------PART-SIX-LOCATION--------------------*/
 
@@ -978,6 +882,7 @@ iframe{
     font-size: 40px;
     color : #E5C394;
     font-family: "Playfair Display", serif;
+    padding-bottom : 10px;
 }
 
 .container-part-six-house-rules-polices-notes h3 {
@@ -996,7 +901,6 @@ iframe{
     font-family: 'Baskerville Old Face', serif;
     padding : 20px 0px 0px 20px;
 }
-
 
 /*---------PART-SIX-POLICIES-AND-NOTES------------------*/
 
@@ -1064,7 +968,7 @@ iframe{
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 65px;
+    font-size: clamp(40px, 7vw, 65px);
     font-family: "Playfair Display", serif;
     font-weight : 300;
     color : white;
@@ -1152,11 +1056,10 @@ input::placeholder {
     cursor: pointer;
     margin-top: 20px;
     font-weight: 700;
-    font-size : 18px;
+    font-size : 20px;
     width : 270px;
 }
   
-
 /*---------------------FOOTER-----------------------*/
 
 footer {
@@ -1323,14 +1226,11 @@ footer button {
         font-size: clamp(15px, 3vw, 30px);
     }
 
+    #lightbox img {
+        transform: scale(2.0);
+    }
+
 }
-
-
-
-
-
-
-
 
 
 
@@ -1363,11 +1263,14 @@ footer button {
         height : auto;
     }
 
-
     /*--------------PART ONE---------------*/
 
     .part-one h2{   
         font-size: clamp(30px, 5vw, 50vw);
+    }
+
+    .part-one {
+        padding-bottom : 150px;
     }
 
     /*--------------PART two---------------*/
@@ -1393,9 +1296,8 @@ footer button {
     }
 
     .part-two-text p{
-        font-size: 15px;
+        font-size: 21px;
         text-align: center;
-        max-width : 50%;
     }
     
     /*--------------PART THREE---------------*/
@@ -1411,11 +1313,11 @@ footer button {
     }
 
     .part-three-text h3{
-        font-size: clamp(15px, 5vw, 30px);
+        font-size: clamp(20px, 5vw, 30px);
     }
 
     .part-three-text p{
-        font-size: clamp(10px, 3vw, 18px);
+        font-size: clamp(18px, 3vw, 22px);
     }
 
     /*--------------PART FOUR---------------*/
@@ -1425,7 +1327,6 @@ footer button {
 
     .part-four p {
         font-size: clamp(14px, 3vw, 18px);
-        width: 60%;
         padding-bottom: 20px;
         max-width: 80%;
         margin: 0 auto;
@@ -1471,8 +1372,8 @@ footer button {
         font-weight : 500;
     }
 
-    /*--------------PART SIX---------------*/
-    /*--------------PART SIX EQUIPEMENT ---------------*/
+    /*--------------PART SIX EQUIPMENT---------------*/
+
     .part-six-container-equipment {
         display: flex;
         flex-direction: column;
@@ -1496,12 +1397,12 @@ footer button {
     }
 
     .part-six-equipment h3 {
-        font-size: clamp(20px, 3vw, 25px);
+        font-size: clamp(22px, 3vw, 25px);
         font-weight: 800;
     }
 
     .part-six-equipment p {
-        font-size: clamp(18px, 3vw, 22px);
+        font-size: clamp(21px, 3vw, 22px);
         font-weight : 500;
     }
 
@@ -1513,12 +1414,11 @@ footer button {
     }
 
     .part-seven h2 {
-        font-size: clamp(14px, 7vw, 50px);
+        font-size: clamp(28px, 9vw, 50px);
         width: 70%;
         text-align: center;
     }
 
-    
     /*--------------PART CONTACT---------------*/
 
     .part-contact-text h3{
@@ -1568,6 +1468,10 @@ footer button {
 
 
 
+
+
+
+
 /*-------------------- MOBILE (480px et moins) --------------------*/
 @media screen and (max-width: 480px) {
 
@@ -1587,7 +1491,7 @@ footer button {
     }
 
     .part-one h3 {
-        font-size: 16px;
+        font-size: 21px;
     }
 
     /*--------------PART TWO---------------*/
@@ -1638,8 +1542,7 @@ footer button {
 
     /*--------------PART FOUR---------------*/
     .part-four p {
-        width : 60%;
-        font-size : clamp(10px, 4vw, 16px);
+        font-size : clamp(18px, 4vw, 20px);
     }
 
     .part-four-img {
@@ -1664,6 +1567,10 @@ footer button {
 
     .part-four-img-bathroom img {
         width : clamp(150px, 70vw, 300px);
+    }
+
+    #lightbox img {
+        transform: scale(1.0);
     }
 
     /*--------------PART FIVE---------------*/
@@ -1722,9 +1629,4 @@ footer button {
         font-size: clamp(16px, 3vw, 20px);
     }
 
-    /*--------------PART CONTACT---------------*/
-
-    .part-contact-mail label {
-        width: clamp(200px, 35vw, 400px);
-    }
 }
